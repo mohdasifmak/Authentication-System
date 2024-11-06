@@ -1,0 +1,29 @@
+<% layout('layout.ejs') %>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Add New Product</h2>
+    <form action="/create" method="POST">
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter product name" required>
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price" name="price" placeholder="Enter price" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3" placeholder="Enter product description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter Quantity" required>
+        </div>
+        <div class="form-group">
+            <label for="imageUrl">Image URL</label>
+            <input type="url" class="form-control" id="imageUrl" name="imageUrl" placeholder="Enter image URL" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+</div>
+

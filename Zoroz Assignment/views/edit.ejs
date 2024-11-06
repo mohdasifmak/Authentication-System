@@ -1,0 +1,29 @@
+<% layout('layout.ejs') %>
+
+<div class="container mt-5">
+    <h2>Edit Product</h2>
+    <form action="/update/<%= product._id %>" method="POST">
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>" required>
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price" name="price" value="<%= product.price %>" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required><%= product.description %></textarea>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" value="<%= product.quantity %>" required>
+        </div>
+        <div class="form-group">
+            <label for="imageUrl">Image URL</label>
+            <input type="url" class="form-control" id="imageUrl" name="imageUrl" value="<%= product.imageUrl %>" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Product</button>
+    </form>
+</div>
+
